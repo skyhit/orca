@@ -1458,6 +1458,8 @@ const api = {
       siteUrl: string
       email: string
       apiToken: string
+      deployment?: 'cloud' | 'datacenter'
+      username?: string
     }): Promise<{ ok: true; viewer: unknown } | { ok: false; error: string }> =>
       ipcRenderer.invoke('jira:connect', args),
 
